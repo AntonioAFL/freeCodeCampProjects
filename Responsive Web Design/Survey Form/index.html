@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <!-- ? HEADER -->
+    <header>
+      <h1 id="title">The Programmer Survey</h1>
+      <p id="description"><em>Nothing is impossible!</em></p>
+    </header>
+
+    <!-- ? FORM -->
+    <form id="survey-form">
+      <!-- ? NAME -->
+      <section>
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" placeholder=" Enter your name" required />
+      </section>
+
+      <!-- ? EMAIL -->
+      <section>
+        <label for="email" id="email-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder=" Enter your Email"
+          required
+        />
+      </section>
+
+      <!-- ? AGE -->
+      <section>
+        <label for="number" id="number-label"
+          >Age <small>(optional)</small></label
+        >
+        <input
+          type="number"
+          id="number"
+          placeholder=" Age"
+          min="12"
+          max="99"
+        />
+      </section>
+
+      <!-- ? GENDER -->
+      <section>
+        <p>Select your Gender</p>
+
+        <input
+          type="radio"
+          name="gender"
+          class="inline-input"
+          id="male"
+          value="male"
+          checked
+        />
+        <label for="male">Male</label>
+
+        <br />
+
+        <input
+          type="radio"
+          name="gender"
+          class="inline-input"
+          id="female"
+          value="female"
+        />
+        <label for="female">Female</label>
+      </section>
+
+      <!-- ? TYPES OF DEVELOPERS -->
+      <section>
+        <label for="dropdown"
+          >What type of Software Developer you want to be?</label
+        >
+        <select id="dropdown">
+          <option value="" selected disabled>Select an option</option>
+          <option value="front">Front-end Developer</option>
+          <option value="back">Back-end Developer</option>
+          <option value="mobile">Mobile Developer</option>
+          <option value="desktop">Desktop Developer</option>
+          <option value="embedded">Embedded Developer</option>
+          <option value="database">Database Developer</option>
+          <option value="cloud">Cloud Developer</option>
+          <option value="security">Security Developer</option>
+          <option value="data-science">Data Science Developer</option>
+          <option value="big-data">Big Data Developer</option>
+          <option value="game">Game Developer</option>
+          <option value="graphic">Graphic Developer</option>
+          <option value="other">Other</option>
+        </select>
+      </section>
+
+      <!-- ? PROGRAMMING LANGUAGES -->
+      <section>
+        <p>What programming languages do you know?</p>
+
+        <input
+          type="checkbox"
+          value="javascript"
+          class="inline-input"
+          id="javascript"
+        />
+        <label for="javascript">Javascript</label><br />
+
+        <input
+          type="checkbox"
+          value="python"
+          class="inline-input"
+          id="python"
+        />
+        <label for="python">Python</label><br />
+
+        <input type="checkbox" value="java" class="inline-input" id="java" />
+        <label for="java">Java</label><br />
+
+        <input type="checkbox" value="php" class="inline-input" id="php" />
+        <label for="php">PHP</label><br />
+
+        <input type="checkbox" value="c" class="inline-input" id="c" />
+        <label for="C">C/C++</label><br />
+
+        <input type="checkbox" value="c#" class="inline-input" id="c#" />
+        <label for="c#">C#</label><br />
+
+        <input type="checkbox" value="swift" class="inline-input" id="swift" />
+        <label for="swift">Swift</label><br />
+
+        <input type="checkbox" value="other" class="inline-input" id="other" />
+        <label for="other">Others</label><br />
+      </section>
+
+      <!-- ? MOTIVATION -->
+      <section>
+        <label for="motivation"
+          >What motivates you to be a software developer?</label
+        ><br />
+        <textarea id="motivation" placeholder="Write here..."></textarea>
+      </section>
+      <!-- ? SUBMIT BUTTON -->
+      <section id="button">
+        <label for="submit"></label>
+        <button type="submit" id="submit" cols="30" rows="3">Submit</button>
+      </section>
+    </form>
+  </body>
+</html>
