@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&display=swap");
+
+:root {
+  --Body-bg: rgb(221, 217, 214);
+  --Main-bg: rgba(196, 189, 183, 0.526);
+}
+
+/* !BODY */
+body {
+  font-family: "BioRhyme", serif;
+  background-color: var(--Body-bg);
+  margin: 30px;
+  padding: 0;
+}
+
+/* !MAIN CONTENT */
+main {
+  margin: 30px auto;
+  padding: 30px;
+  display: block;
+  background-color: var(--Main-bg);
+  border-radius: 15px;
+  max-width: 652px;
+}
+
+/* !HEADER */
+#title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* !IMAGE */
+#img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border:  .5rem solid;
+  border-color: var(--Body-bg);
+  border-radius: 15px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 10px;
+}
+
+/* !INFO */
+#tribute-info > * {
+  text-align: justify;
+  font-size: .875rem;
+}
+
+section {
+  padding: 16px;
+}
+
+.topic,
+.sub-topic,
+.info,
+.sub-info {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-section {
+  margin: 16px;
+}
+
+/* !FOOTER */
+footer {
+    width: 100%;
+}
+
+footer > p {
+    text-align: center;
+    font-size: .6875rem;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(134, 114, 99)
+}
