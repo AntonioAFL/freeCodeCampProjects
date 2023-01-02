@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>JSX with React</h1>
+        <p class="subtitle">Documentation</p>
+      </header>
+
+      <div class="ham-menu">
+      <input type="checkbox" id="burger-button" />
+      <div class="hamburger"></div>
+      
+      <div class="navigation">
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Use_Cases" class="nav-link">Use Cases</a>
+        <a href="#Introducing_JSX" class="nav-link">Introducing JSX</a>
+        <a href="#Why_JSX?" class="nav-link">Why JSX?</a>
+        <a href="#Coding_JSX" class="nav-link">Coding JSX</a>
+        <a href="#Expressions_in_JSX" class="nav-link">Expressions in JSX</a>
+        <a href="#Inserting_a_Large_Block_of_HTML" class="nav-link"
+        >Inserting a Large Block of HTML</a
+        >
+        <a href="#One_Top_Level_Element" class="nav-link"
+        >One Top Level Element</a
+        >
+        <a href="#Conditions" class="nav-link">Conditions</a>
+        <a href="#References" class="nav-link">References</a>
+      </div>
+    </div>
+    </nav>
+
+    <main id="main-doc">
+      <!-- ? SECTION 1 == Introduction -->
+      <section class="main-section" id="Introduction">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <article>
+          <p>
+            React is a library for building user interfaces. React is not a
+            framework - it's not even exclusive to the web. It's used with other
+            libraries to render to certain environments. For instance, React
+            Native can be used to build mobile applications.
+          </p>
+
+          <div class="list">
+            <p>Prerequisites to use React:</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+
+          <p>
+            To build for the web, developers use React in tandem with ReactDOM.
+            React and ReactDOM are often discussed in the same spaces as — and
+            utilized to solve the same problems as — other true web development
+            frameworks. When we refer to React as a "framework", we're working
+            with that colloquial understanding.
+          </p>
+
+          <p>
+            React's primary goal is to minimize the bugs that occur when
+            developers are building UIs. It does this through the use of
+            components — self-contained, logical pieces of code that describe a
+            portion of the user interface. These components can be composed
+            together to create a full UI, and React abstracts away much of the
+            rendering work, leaving you to concentrate on the UI design.
+          </p>
+        </article>
+      </section>
+
+      <!-- ? SECTION 2 == Use Cases -->
+      <section class="main-section" id="Use_Cases">
+        <header>
+          <h2>Use Cases</h2>
+        </header>
+        <article>
+          <p>
+            Unlike the other frameworks covered in this module, React does not
+            enforce strict rules around code conventions or file organization.
+            This allows teams to set conventions that work best for them, and to
+            adopt React in any way they would like to. React can handle a single
+            button, a few pieces of an interface, or an app's entire user
+            interface.
+          </p>
+
+          <p>
+            While React can be used for small pieces of an interface, it's not
+            as easy to "drop into" an application as a library like jQuery, or
+            even a framework like Vue — it is more approachable when you build
+            your entire app with React.
+          </p>
+
+          <p>
+            In addition, many of the developer-experience benefits of a React
+            app, such as writing interfaces with JSX, require a compilation
+            process. Adding a compiler like Babel to a website makes the code on
+            it run slowly, so developers often set up such tooling with a build
+            step. React arguably has a heavy tooling requirement, but it can be
+            learned.
+          </p>
+        </article>
+      </section>
+
+      <!-- ? SECTION 3 == Introducing JSX -->
+      <section class="main-section" id="Introducing_JSX">
+        <header>
+          <h2>Introducing JSX</h2>
+        </header>
+
+        <article>
+          <p>Consider this variable declaration:</p>
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> element <span class="operator">=</span> <span class="punctuation">&lt;</span><span class="element">h1</span><span class="punctuation">&gt;</span>Hello, World!<span class="punctuation">&lt;/</span><span class="element">h1</span><span class="punctuation">&gt;</span>;
+
+</code></pre>
+          </div>
+          <p>This funny tag syntax is neither a string nor HTML.</p>
+
+          <p>
+            It is called JSX, and it is a syntax extension to JavaScript. We
+            recommend using it with React to describe what the UI should look
+            like. JSX may remind you of a template language, but it comes with
+            the full power of JavaScript.
+          </p>
+
+          <p>
+            JSX produces React “elements”. We will explore rendering them to the
+            DOM in the next section.
+          </p>
+        </article>
+      </section>
+
+      <!-- ? SECTION 4 == Why JSX? -->
+      <section class="main-section" id="Why_JSX?">
+        <header>
+          <h2>Why JSX?</h2>
+        </header>
+        <article>
+          <ul>
+            <li>
+              React embraces the fact that rendering logic is inherently coupled
+              with other UI logic: how events are handled, how the state changes
+              over time, and how the data is prepared for display.
+            </li>
+            <li>
+              Instead of artificially separating technologies by putting markup
+              and logic in separate files, React separates concerns with loosely
+              coupled units called “components” that contain both.
+            </li>
+            <li>
+              React doesn't require using JSX, but most people find it helpful
+              as a visual aid when working with UI inside the JavaScript code.
+              It also allows React to show more useful error and warning
+              messages.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ? SECTION 5 == Coding JSX-->
+      <section class="main-section" id="Coding_JSX">
+        <header>
+          <h2>Coding JSX</h2>
+        </header>
+
+        <article>
+          <p>
+            JSX allows us to write HTML elements in JavaScript and place them in
+            the DOM without any
+            <span class="example">createElement()</span> and/or
+            <span class="example">appendChild()</span> methods.
+          </p>
+
+          <p>
+            JSX converts HTML tags into react elements. <br />
+            Here are two examples. The first uses JSX and the second does not:
+          </p>
+
+          <h3>With JSX:</h3>
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">&lt;</span><span class="element">h1</span><span class="punctuation">&gt;</span>I Love JSX!<span class="punctuation">&lt;/</span><span class="element">h1</span><span class="punctuation">&gt;</span>
+
+  <span class="keyword">const</span> root <span class="operator">=</span> ReactDom<span class="punctuation">.</span><span class="method">createRoot</span><span class="punctuation">(</span>document<span class="operator">.</span><span class="method">getElementById</span><span class="punctuation">(</span><span class="string">'root'</span><span class="punctuation">));</span>
+  root<span class="punctuation">.</span><span class="method">render</span><span class="punctuation">(</span>myElement<span class="punctuation">);</span>
+
+</code></pre>
+          </div>
+
+          <h3>Without JSX:</h3>
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> myElement <span class="operator">=</span> React<span class="punctuation">.</span><span class="method">createElement</span><span class="punctuation">(</span><span class="string">'h1', {}, 'I do not use JSX!'</span><span class="punctuation">);</span>
+
+  <span class="keyword">const</span> root <span class="operator">=</span> ReactDom<span class="punctuation">.</span><span class="method">createRoot</span><span class="punctuation">(</span>document<span class="operator">.</span><span class="method">getElementById</span><span class="punctuation">(</span><span class="string">'root'</span><span class="punctuation">));</span>
+  root<span class="punctuation">.</span><span class="method">render</span><span class="punctuation">(</span>myElement<span class="punctuation">);</span>
+
+</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ? SECTION 6 == Expressions in JSX -->
+      <section class="main-section" id="Expressions_in_JSX">
+        <header>
+          <h2>Expressions in JSX</h2>
+        </header>
+
+        <article>
+          <p>
+            With JSX you can write expressions inside curly braces
+            <span class="example">{ }</span>.
+          </p>
+
+          <p>
+            The expression can be a React variable, or property, or any other
+            valid JavaScript expression. JSX will execute the expression and
+            return the result:
+          </p>
+
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">&lt;</span><span class="element">h1</span><span class="punctuation">&gt;</span>React is <span class="punctuation">{</span><span class="element">5 + 5</span><span class="operator">}</span> times better with JSX<span class="punctuation">&lt;/</span><span class="element">h1</span><span class="punctuation">&gt;</span>
+
+</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ? SECTION 7 == Inserting a Large Block of HTML -->
+      <section class="main-section" id="Inserting_a_Large_Block_of_HTML">
+        <header>
+          <h2>Inserting a Large Block of HTML</h2>
+        </header>
+
+        <article>
+          <p>
+            To write HTML on multiple lines, put the HTML inside parentheses:
+          </p>
+
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">(</span>
+    <span class="punctuation">&lt;</span><span class="element">ul</span><span class="punctuation">&gt;</span>
+      <span class="punctuation">&lt;</span><span class="element">li</span><span class="punctuation">&gt;</span>Apples<span class="punctuation">&lt;/</span><span class="element">li</span><span class="punctuation">&gt;</span>
+      <span class="punctuation">&lt;</span><span class="element">li</span><span class="punctuation">&gt;</span>Bananas<span class="punctuation">&lt;/</span><span class="element">li</span><span class="punctuation">&gt;</span>
+      <span class="punctuation">&lt;</span><span class="element">li</span><span class="punctuation">&gt;</span>Cherries<span class="punctuation">&lt;/</span><span class="element">li</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="element">ul</span><span class="punctuation">&gt;</span>
+  <span class="punctuation">);</span>
+
+</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ? SECTION 8 == One Top Level Element -->
+      <section class="main-section" id="One_Top_Level_Element">
+        <header>
+          <h2>One Top Level Element</h2>
+        </header>
+
+        <article>
+          <p>The HTML code must be wrapped in <i>ONE</i> top level element</p>
+
+          <p>
+            So if you like to write <i>two</i> paragraphs, you must put tem
+            inside a parent element, like a
+            <span class="example">div</span> element.
+          </p>
+
+          <div class="code">
+            <pre><code>
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">(</span>
+    <span class="punctuation">&lt;</span><span class="element">div</span><span class="punctuation">&gt;</span>
+      <span class="punctuation">&lt;</span><span class="element">p</span><span class="punctuation">&gt;</span>I am a paragraph.<span class="punctuation">&lt;/</span><span class="element">p</span><span class="punctuation">&gt;</span>
+      <span class="punctuation">&lt;</span><span class="element">p</span><span class="punctuation">&gt;</span>I am a paragraph too.<span class="punctuation">&lt;/</span><span class="element">p</span><span class="punctuation">&gt;</span>
+    <span class="punctuation">&lt;/</span><span class="element">div</span><span class="punctuation">&gt;</span>
+  <span class="punctuation">);</span>
+
+</code></pre>
+          </div>
+        </article>
+      </section>
+
+      <!-- ? SECTION 9 == Conditions -->
+      <section class="main-section" id="Conditions">
+        <header>
+          <h2>Conditions</h2>
+        </header>
+
+        <article>
+          <p>
+            React supports <span class="example">if</span> statements, but not
+            <i>inside</i> JSX
+          </p>
+
+          <p>
+            To be able to use conditional statements in JSX, you should put the
+            <span class="example">if</span> statements outside of the JSX, or
+            you could use a ternary expression instead:
+          </p>
+
+          <div>
+            <h3>Option 1:</h3>
+            <p>
+              Write <span class="example">if</span> statements outside of the
+              JSX code:
+            </p>
+
+            <div class="code">
+              <pre><code>
+  <span class="keyword">const</span> x <span class="operator">=</span> 5<span class="punctuation">;</span>
+  <span class="keyword">let</span> text <span class="operator">=</span> <span class="string">"Goodbye"</span><span class="punctuation">;</span>
+  <span class="keyword">if</span> <span class="punctuation">(</span>x <span class="operator">&lt;</span> 10<span class="punctuation">) {</span>
+    text <span class="operator">=</span> <span class="string">"Hello"</span><span class="punctuation">;</span>
+  <span class="punctuation">}</span>
+
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">&lt;</span><span class="element">h1</span><span class="punctuation">&gt;{</span>text<span class="punctuation">}&lt;/</span><span class="element">h1</span><span class="punctuation">&gt;;</span>
+
+</code></pre>
+            </div>
+          </div>
+
+          <div>
+            <h3>Option 2:</h3>
+            <p>Use ternary expressions instead:</p>
+
+            <div class="code">
+              <pre><code>
+  <span class="keyword">const</span> x <span class="operator">=</span> 5<span class="punctuation">;</span>
+
+  <span class="keyword">const</span> myElement <span class="operator">=</span> <span class="punctuation">&lt;</span><span class="element">h1</span><span class="punctuation">&gt;{(</span>x<span class="punctuation">)</span> <span class="operator">&lt;</span> 10 <span class="operator">?</span> <span class="string">"Hello"</span> <span class="punctuation">:</span> <span class="string">"Goodbye"</span><span class="punctuation">}&lt;/</span><span class="element">h1</span><span class="punctuation">&gt;;</span>
+
+</code></pre>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ? SECTION 10 == References -->
+      <section class="main-section" id="References">
+        <header>
+          <h2>References</h2>
+        </header>
+        <article>
+          <ul>
+            <li>
+              <a href="https://reactjs.org/" target="_blank"
+                >React Official Documentation</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/" target="_blank"
+                >MDN Web Docs</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
