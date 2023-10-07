@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Product Landing Page</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <!-- NAVBAR LOGO -->
+      <div id="nav_logo">
+        <img
+          id="header-img"
+          class="netflix-logo"
+          src="https://logolook.net/wp-content/uploads/2021/11/Netflix-Logo.svg"
+          alt="Netflix Logo"
+          width="100px"
+          height="50px"
+        />
+        <img
+          class="n-logo"
+          src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
+          alt="Netflix logo"
+        />
+      </div>
+
+      <!-- NAVBAR MENU -->
+      <nav id="nav-bar">
+        <input type="checkbox" id="menu-toggle" class="menu-button" />
+        <label for="menu-toggle" class="menu-icon menu-button">
+          <span class="icon-hamburger menu-button">&#9776;</span>
+          <span class="icon-close">&#10006;</span>
+        </label>
+        <ul id="nav-menu">
+          <li><a class="nav-link" href="#plans" id="plans-link">Plans</a></li>
+          <li>
+            <a class="nav-link" href="#prices" id="prices-link">Prices</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#form" id="form-link">Subscribe</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PRODUCT VIDEO -->
+      <div class="video-container">
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/sY2djp46FeY?si=53dI-jy9qrUIttqD"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- PLANS SECTION -->
+      <div id="plans" class="section">
+        <h1>Plans</h1>
+
+        <table>
+          <caption></caption>
+          <thead>
+            <tr>
+              <th>Plans</th>
+              <th>Characteristics</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="text-center">Standard with Ads</td>
+              <td>
+                <div class="container">
+                  <ul class="characteristics">
+                    <li>
+                      With advertisements, some movies and series not available.
+                    </li>
+                    <li>Can be used by 2 devices at the same time.</li>
+                    <li>Full HD.</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="text-center">Basic</td>
+              <td>
+                <div class="container">
+                  <ul class="characteristics">
+                    <li>
+                      Mobile games, movies, and series without advertisements.
+                    </li>
+                    <li>Can be used by 1 device at the same time.</li>
+                    <li>HD.</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="text-center">Standard</td>
+              <td>
+                <div class="container">
+                  <ul class="characteristics">
+                    <li>
+                      Mobile games, movies, and series without advertisements.
+                    </li>
+                    <li>Can be used by 2 devices at the same time.</li>
+                    <li>Full HD.</li>
+                    <li>Can download content on 2 devices at the same time.</li>
+                    <li>
+                      Can add one extra member that doesn't lives with you.
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="text-center">Premium</td>
+              <td>
+                <div class="container">
+                  <ul class="characteristics">
+                    <li>
+                      Mobile games, movies, and series without advertisements.
+                    </li>
+                    <li>Can be used by 4 devices at the same time.</li>
+                    <li>Ultra HD</li>
+                    <li>Can download content on 6 devices at the same time.</li>
+                    <li>
+                      Can add two extra members that doesn't lives with you.
+                    </li>
+                    <li>Netflix spatial audio.</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PRICES SECTION -->
+      <div id="prices" class="section">
+        <h1>Prices</h1>
+        <div class="cards-container">
+          <div class="card text-center">
+            <div class="card-title">
+              <p>Standard with Ads</p>
+            </div>
+            <div class="card-body">
+              <p>$5.99</p>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-title">
+              <p>Basic</p>
+            </div>
+            <div class="card-body">
+              <p>$9.99</p>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-title">
+              <p>Standard</p>
+            </div>
+            <div class="card-body">
+              <p>$19.99</p>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-title">
+              <p>Premium</p>
+            </div>
+            <div class="card-body">
+              <p>$29.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBSCRIBE FORM -->
+      <form
+        id="form"
+        action="https://www.freecodecamp.com/email-submit"
+        class="section"
+      >
+        <label for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email..."
+        />
+
+        <input id="submit" type="submit" value="Subscribe" />
+      </form>
+    </main>
+
+    <footer>
+      <h1>¿Need Help?</h1>
+      <div class="container">
+        <ul class="footer-nav">
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Copyright Policy</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
